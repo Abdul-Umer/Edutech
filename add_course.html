@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Add Course {% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h2>Add a New Course</h2>
+        
+        <form action="{{ url_for('addcourse') }}" method="POST">
+            <div class="form-group">
+                <label for="cid">Course ID:</label>
+                <input type="text" id="cid" name="cid" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="cname">Course Name:</label>
+                <input type="text" id="cname" name="cname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" required>
+            </div>
+
+            <div class="form-group">
+                <label for="instructor">Instructor:</label>
+                <input type="text" id="instructor" name="instructor" required>
+            </div>
+
+            <button type="submit">Add Course</button>
+        </form>
+        
+        <h3>Existing Courses:</h3>
+        <ul>
+            {% for course in course %}
+                <li>{{ course[1] }} (ID: {{ course[0] }}) - Instructor: {{ course[3] }}, Fees: {{ course[2] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

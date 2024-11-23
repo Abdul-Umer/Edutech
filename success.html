@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <h3>Login Successfully!{{username}}</h3>
+   
+
+    <a href="{{url_for('logout')}}"><button class="custom-button">Logout</button></a>
+{% endblock %}

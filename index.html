@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Edu Tech{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Edu Tech</h1>
+    <img src="{{ url_for('static', filename='imgs/java.jpg') }} " alt="Java Image" width="200px" height="100px">
+
+    <p>Your go-to platform for learning and growing.</p>
+{% endblock %}

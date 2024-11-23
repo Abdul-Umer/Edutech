@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Edu Tech{% endblock %}
+
+{% block content %}
+<span>
+ 
+    Welcome to Edu Tech
+</span>
+   
+    <p>Your go-to platform for learning and growing.</p>
+    
+    <button onclick="window.location.href='addcourse.html'"><a href="http://127.0.0.1:5000/courses/addcourse">Add Course</a></button>
+
+    
+
+  
+
+    <button type='btn-btn-primary'><a href="{{ url_for('view_course_list') }}" class="btn btn-primary">View Course</a></button>
+
+
+
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <h2>Python Programming</h2>
+            <p>Learn Python from scratch and master the most in-demand programming language.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Web Development</h2>
+            <p>Become a web developer by learning HTML, CSS, JavaScript, and more.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Data Science</h2>
+            <p>Dive deep into data analysis, visualization, and machine learning.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h2>Database Management</h2>
+            <p>Master MySQL, PostgreSQL, and database management for backend development.</p>
+            <button>Learn More</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <h2>Mobile Development</h2>
+            <p>Learn to create mobile apps for both Android and iOS platforms.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+{% endblock %}

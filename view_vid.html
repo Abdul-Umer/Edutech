@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ course.name }}</h1>
+<h3>Videos:</h3>
+<ul>
+    {% for video in videos %}
+        <li><a href="{{ video.url }}">{{ video.title }}</a></li>
+    {% else %}
+        <li>No videos yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
